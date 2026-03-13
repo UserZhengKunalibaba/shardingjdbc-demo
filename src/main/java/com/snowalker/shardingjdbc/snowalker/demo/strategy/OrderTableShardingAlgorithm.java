@@ -1,12 +1,10 @@
 package com.snowalker.shardingjdbc.snowalker.demo.strategy;
 
-import com.snowalker.shardingjdbc.snowalker.demo.utils.ShardKeyUtil;
 import io.shardingsphere.api.algorithm.sharding.PreciseShardingValue;
 import io.shardingsphere.api.algorithm.sharding.standard.PreciseShardingAlgorithm;
-
 import java.util.Collection;
 
-public class OrderDbShardingAlgorithm  implements PreciseShardingAlgorithm<String> {
+public class OrderTableShardingAlgorithm  implements PreciseShardingAlgorithm<String> {
 
     @Override
     public String doSharding(Collection<String> availableTargetNames,
@@ -18,13 +16,9 @@ public class OrderDbShardingAlgorithm  implements PreciseShardingAlgorithm<Strin
             throw new IllegalArgumentException("invalid userId: " + userId);
         }
 
-        // ⭐ 倒数第2位
-        char dbChar = userId.charAt(userId.length() - 2);
+        // ⭐ 最后两位直接作为表后缀
+        String suffix = userId.substring(userId.length() - 2);
 
-        if (dbChar < '0' || dbChar > '9') {
-            throw new IllegalArgumentException("userId last 2 char not digit: " + userId);
-        }
-
-        return "ds" + dbChar;
+        return "t_order_" + suffix;
     }
 }

@@ -1,9 +1,6 @@
 package com.snowalker.shardingjdbc.snowalker.demo.controller;
 
-import com.snowalker.shardingjdbc.snowalker.demo.entity.OrderInfo;
 import com.snowalker.shardingjdbc.snowalker.demo.service.OrderService;
-import com.snowalker.shardingjdbc.snowalker.demo.utils.IdGen;
-import com.snowalker.shardingjdbc.snowalker.demo.utils.SnowflakeIdWorkerUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

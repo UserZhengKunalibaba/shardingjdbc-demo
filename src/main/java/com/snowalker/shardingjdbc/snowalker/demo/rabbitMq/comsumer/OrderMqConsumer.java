@@ -1,10 +1,10 @@
 package com.snowalker.shardingjdbc.snowalker.demo.rabbitMq.comsumer;
 
 import com.alibaba.fastjson.JSONObject;
-import com.rabbitmq.client.Channel;
 import com.snowalker.shardingjdbc.snowalker.demo.config.RabbitConfig;
 import com.snowalker.shardingjdbc.snowalker.demo.entity.OrderInfo;
 import com.snowalker.shardingjdbc.snowalker.demo.mapper.OrderMapper;
+import com.rabbitmq.client.Channel;
 import groovy.util.logging.Slf4j;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;

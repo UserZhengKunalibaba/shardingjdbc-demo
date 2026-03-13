@@ -2,11 +2,10 @@ package com.snowalker.shardingjdbc.snowalker.demo.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.snowalker.shardingjdbc.snowalker.demo.entity.OrderInfo;
+import com.snowalker.shardingjdbc.snowalker.demo.utils.IdGen;
 import com.snowalker.shardingjdbc.snowalker.demo.mapper.OrderMapper;
 import com.snowalker.shardingjdbc.snowalker.demo.rabbitMq.producer.OrderMqProducer;
 import com.snowalker.shardingjdbc.snowalker.demo.service.OrderService;
-import com.snowalker.shardingjdbc.snowalker.demo.utils.IdGen;
-import com.snowalker.shardingjdbc.snowalker.demo.utils.SnowflakeIdWorkerUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
